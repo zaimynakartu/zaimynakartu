@@ -685,6 +685,20 @@
     </div>
 </div>
 
+<script>
+    let gets = (function() {
+        let a = window.location.search;
+        let b = new Object();
+        a = a.substring(1).split("&");
+        for (let i = 0; i < a.length; i++) {
+        c = a[i].split("=");
+            b[c[0]] = c[1];
+        }
+        return b;
+    })();
+    console.log(gets);
+    
+</script>
 <script src="assets/59a7606e/jquery.js"></script>
 <script src="assets/a9b4c128/yii.js"></script>
 <script src="js/notificate.js"></script>
